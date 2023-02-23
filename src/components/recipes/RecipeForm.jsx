@@ -103,7 +103,7 @@ const RecipeForm = (props) => {
             id="instructions"
             cols="30"
             rows="10"
-            resize="none"
+            style={{resize:"none"}}
             required
             ref={InstructionsRef}
             className="form-control"
@@ -112,11 +112,12 @@ const RecipeForm = (props) => {
         </div>
         <div className="mb-3">
           <select
+            multiple
             class="form-select"
             aria-label="Default select example"
             name="ingredients"
             id="ingredients"
-            defaultValue={recipe?.Ingredients}
+            defaultValue={recipe?.Ingredients.map(i => i.id)}
             ref={IngredientsRef}
           >
             {ingredientsList.map(i => <option value={i.id} key={i.id}>{i.name}</option>)}            

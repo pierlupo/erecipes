@@ -7,7 +7,7 @@ const NavBar = (props) => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div className="container-fluid">
           <span className="text-light" style={{ cursor: "pointer" }}>
-          <i class="bi bi-egg-fried"></i> eRecipes
+          <i className="bi bi-egg-fried"></i> eRecipes
           </span>
           <button
             className="navbar-toggler"

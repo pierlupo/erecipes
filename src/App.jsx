@@ -22,6 +22,7 @@ const App = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null)
   const signFormMode = useSelector(state => state.auth.authMode) 
   const user = useSelector(state => state.auth.user)
+  //const recipes = useSelector(state => state.recipe.recipes)
   const [RecipeFormMode, setRecipeFormMode] = useState("")
   const dispatch = useDispatch()
 
@@ -97,7 +98,7 @@ const App = () => {
           })
 
           if (!response.ok) {
-            throw new Error("Il y a eu un soucis lors de l'ajout d'une recette.")
+            throw new Error("Il y a eu un souci lors de l'ajout d'une recette.")
           }
 
           const data = await response.json()
@@ -153,7 +154,7 @@ const App = () => {
             })
 
             if (!response.ok) {
-              throw new Error("Il y a eu un soucis lors de la suppression de la recette.")
+              throw new Error("Il y a eu un souci lors de la suppression de la recette.")
             }
 
             setRecipes([...recipes.filter(r => r.id !== recipeId)])
